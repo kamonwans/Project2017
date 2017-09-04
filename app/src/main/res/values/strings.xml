@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ThaiSpellingGame</string>
+    <string name="open_drawer">Open Menu</string>
+    <string name="close_drawer">Close Menu</string>
+    <string name="name_menu_test">"แบบทดสอบ"</string>
+    <string name="name_menu_learn">"สื่อการเรียนรู้"</string>
+    <string name="name_menu_profile">"โปรไฟล์"</string>
+    <string name="name_menu_setting">"ตั้งค่า"</string>
+    <string name="name_menu_contact">"ติดต่อเรา"</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
