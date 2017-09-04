@@ -8,6 +8,15 @@
     android:id="@+id/drawerLayout"
     tools:context="com.example.kamonwan.projecttsg.activity.MainActivity">
     <!-- Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/contentMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+    </LinearLayout>
 
 
     <!-- Menu -->

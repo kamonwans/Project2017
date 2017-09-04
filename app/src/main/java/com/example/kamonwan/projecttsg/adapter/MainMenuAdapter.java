@@ -1,4 +1,4 @@
-package com.example.kamonwan.projecttsg;
+package com.example.kamonwan.projecttsg.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.kamonwan.projecttsg.R;
 
 
 public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHolder> {
@@ -23,7 +25,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_fragment_main, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_fragment_main_menu, parent, false);
         return new ViewHolder(view);
     }
 

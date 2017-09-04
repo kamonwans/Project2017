@@ -2,7 +2,6 @@ package com.example.kamonwan.projecttsg.activity;
 
 import android.content.res.Configuration;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,7 +10,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.kamonwan.projecttsg.R;
-import com.example.kamonwan.projecttsg.fragment.MainFragment;
+import com.example.kamonwan.projecttsg.adapter.MainTabBarAdapter;
+import com.example.kamonwan.projecttsg.fragment.MainMenuFragment;
+import com.example.kamonwan.projecttsg.fragment.TabBarFragment;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -27,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initInstance() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        Fragment();
+        FragmentMainMenu();
+        FragmentTabBar();
         actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout,
                 R.string.open_drawer, R.string.close_drawer);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -36,10 +38,18 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("ThaiSpellingGame");
     }
 
-    public void Fragment() {
-        MainFragment mainFragment = new MainFragment();
+    public void FragmentMainMenu() {
+        MainMenuFragment mainMenuFragment = new MainMenuFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.contentContainer, mainFragment);
+        transaction.replace(R.id.contentContainer, mainMenuFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    public void FragmentTabBar() {
+        TabBarFragment tabBarFragment = new TabBarFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.contentMain, tabBarFragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }

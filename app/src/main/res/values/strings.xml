@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ThaiSpellingGame</string>
+    <string name="app_name">"TSG"</string>
     <string name="open_drawer">Open Menu</string>
     <string name="close_drawer">Close Menu</string>
     <string name="name_menu_test">"แบบทดสอบ"</string>
