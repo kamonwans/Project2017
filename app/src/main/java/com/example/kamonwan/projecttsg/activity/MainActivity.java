@@ -3,21 +3,29 @@ package com.example.kamonwan.projecttsg.activity;
 import android.content.res.Configuration;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
 import com.example.kamonwan.projecttsg.R;
+import com.example.kamonwan.projecttsg.adapter.TabAdapter;
 import com.example.kamonwan.projecttsg.fragment.MainMenuFragment;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private void initInstance() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.pager);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        FragmentTabMenu();
         FragmentMainMenu();
         actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout,
                 R.string.open_drawer, R.string.close_drawer);
@@ -39,6 +50,35 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("ThaiSpellingGame");
 
+
+    }
+
+    public void FragmentTabMenu() {
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.icon_home));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.icon_online_user));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.icon_rank));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        final TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager(),
+                tabLayout.getTabCount());
+        viewPager.setAdapter(tabAdapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
     }
 
