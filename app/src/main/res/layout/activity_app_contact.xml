@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kamonwan.projecttsg.activity.AppContactActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAppContact"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:elevation="5dp"
+            android:padding="6dp"
+            android:src="@drawable/icon_home"
+            app:civ_border_color="#000000"
+            app:civ_border_width="4dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="\t\tแอปพลิคชันนี้เป็นแอปพลิเคชันเกมคำศัพท์ไทยที่มักเขียนผิด จัดทำขึ้นเพื่อกระตุ้นให้ผู้เล่นมีปฏิสัมพันธ์กับผู้อื่น และช่วยลดปัญหาการเรียนคำศัพท์ภาษาไทยที่มักเขียนผิดให้ลดน้อยลง"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"/>
+    </LinearLayout>
+</LinearLayout>

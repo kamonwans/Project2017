@@ -8,4 +8,5 @@
     <color name="colorMenuProfile">#594c66</color>
     <color name="colorMenuSetting">#feb63e</color>
     <color name="colorMenuContact">#7ec44a</color>
+    <color name="yourColor">#f966b2</color>
 </resources>

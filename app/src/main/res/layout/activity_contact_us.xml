@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kamonwan.projecttsg.activity.ContactUsActivity">
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgContactOne"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:elevation="5dp"
+        android:padding="6dp"
+        android:src="@drawable/icon_home"
+        app:civ_border_color="#000000"
+        app:civ_border_width="4dp" />
+    <TextView
+        android:gravity="center"
+        android:text="อาจารย์ชิตสุธา  สุ่มเล็ก"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:text="อาจารย์ที่ปรึกษาโครงงาน"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:text="ภาควิชาวิทยาการคอมพิวเตอร์  มหาวิทยาลัยขอนแก่น"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgContactTwo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:elevation="5dp"
+            android:padding="6dp"
+            android:src="@drawable/icon_home"
+            app:civ_border_color="#000000"
+            app:civ_border_width="4dp" />
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgContactThree"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:elevation="5dp"
+            android:padding="6dp"
+            android:src="@drawable/icon_home"
+            app:civ_border_color="#000000"
+            app:civ_border_width="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="นางสาวกมลวรรณ  สิงสวนมอญ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="573020355-4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="20dp"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="นางสาวอภิญญา  จ่ากลาง"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="573020399-4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

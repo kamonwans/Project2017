@@ -5,13 +5,8 @@
     android:orientation="vertical"
     tools:context="com.example.kamonwan.projecttsg.fragment.MainMenuFragment">
 
-
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerViewMain"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
-        </android.support.v7.widget.RecyclerView>
-
+            android:layout_height="match_parent"/>
 </FrameLayout>

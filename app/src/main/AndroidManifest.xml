@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.EditProfileActivity"></activity>
+        <activity android:name=".activity.EditProfileActivity" />
+        <activity android:name=".activity.MainContactActivity" />
+        <activity android:name=".activity.AppContactActivity" />
+        <activity android:name=".activity.ContactUsActivity"></activity>
     </application>
 
 </manifest>
