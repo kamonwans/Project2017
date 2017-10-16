@@ -34,7 +34,6 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
         holder.imageIcon.setImageResource(icon[position]);
         holder.textViewNameMenu.setText(nameMenu[position]);
         holder.linearLayout.setBackgroundResource(colorLayout[position]);
-
     }
 
     @Override

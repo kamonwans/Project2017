@@ -1,5 +1,6 @@
 package com.example.kamonwan.projecttsg.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -11,12 +12,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.kamonwan.projecttsg.R;
+import com.example.kamonwan.projecttsg.adapter.MainMenuAdapter;
 import com.example.kamonwan.projecttsg.adapter.TabAdapter;
 import com.example.kamonwan.projecttsg.fragment.MainMenuFragment;
 
@@ -26,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     TabLayout tabLayout;
     ViewPager viewPager;
+    RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("ThaiSpellingGame");
-
-
     }
 
     public void FragmentTabMenu() {
@@ -66,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-
+                checkTabChange(tab.getPosition());
             }
 
             @Override
@@ -80,6 +85,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void checkTabChange(int position) {
+        switch (position){
+            case 0:
+                viewPager.setCurrentItem(0);
+                break;
+            case 1:
+                viewPager.setCurrentItem(1);
+                break;
+            case 2:
+                viewPager.setCurrentItem(2);
+                break;
+            default:
+                break;
+        }
     }
 
     public void FragmentMainMenu() {

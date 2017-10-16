@@ -24,15 +24,8 @@ public class FreindsOnlineFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_freinds_online, container, false);
+        View view = inflater.inflate(R.layout.fragment_freinds_online, container, false);
+        return view;
     }
 
-
-
-
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
 }

@@ -1,20 +1,27 @@
 package com.example.kamonwan.projecttsg.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.kamonwan.projecttsg.adapter.MainMenuAdapter;
 import com.example.kamonwan.projecttsg.R;
+
+import static com.example.kamonwan.projecttsg.R.layout.fragment_rank;
 
 public class MainMenuFragment extends Fragment {
     RecyclerView recyclerViewMain;
     int[] icon, nameMenu, colorLayout;
     MainMenuAdapter menuAdapter;
+
 
     public MainMenuFragment() {
     }
@@ -35,12 +42,14 @@ public class MainMenuFragment extends Fragment {
         return view;
     }
 
+
     private void initInstance(View view) {
         MocdataMainMenu();
         recyclerViewMain = (RecyclerView) view.findViewById(R.id.recyclerViewMain);
         recyclerViewMain.setLayoutManager(new GridLayoutManager(getContext(), 1));
         menuAdapter = new MainMenuAdapter(icon, nameMenu, colorLayout);
         recyclerViewMain.setAdapter(menuAdapter);
+
 
     }
 }
