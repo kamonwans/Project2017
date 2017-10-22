@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kamonwan.projecttsg">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,9 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -19,7 +24,17 @@
         <activity android:name=".activity.EditProfileActivity" />
         <activity android:name=".activity.MainContactActivity" />
         <activity android:name=".activity.AppContactActivity" />
-        <activity android:name=".activity.ContactUsActivity"></activity>
+        <activity android:name=".activity.ContactUsActivity" />
+        <activity android:name=".activity.MainActivity"></activity>
+
+        <activity android:name="activity.LoginActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
     </application>
+
 
 </manifest>

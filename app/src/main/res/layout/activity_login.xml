@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kamonwan.projecttsg.activity.LoginActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:elevation="5dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_friends"
+        app:civ_border_color="#000000"
+        app:civ_border_width="2dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="ชื่อ : " />
+
+        <EditText
+            android:inputType="text"
+            android:id="@+id/ETName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_edit_text"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="อีเมล : " />
+
+        <EditText
+            android:inputType="textEmailAddress"
+            android:id="@+id/ETEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_edit_text"
+            android:padding="8dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="รหัสผ่าน : " />
+
+        <EditText
+            android:inputType="numberPassword"
+            android:id="@+id/ETPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_edit_text"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:text="หรือ" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/BtnFbLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/BtnLogin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_button_login"
+            android:padding="8dp"
+            android:text="Login" />
+    </LinearLayout>
+
+
+</LinearLayout>

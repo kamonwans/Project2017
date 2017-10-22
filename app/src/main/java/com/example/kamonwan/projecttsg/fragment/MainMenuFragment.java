@@ -10,17 +10,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.kamonwan.projecttsg.activity.MainActivity;
+import com.example.kamonwan.projecttsg.activity.MainContactActivity;
 import com.example.kamonwan.projecttsg.adapter.MainMenuAdapter;
 import com.example.kamonwan.projecttsg.R;
 
 import static com.example.kamonwan.projecttsg.R.layout.fragment_rank;
 
 public class MainMenuFragment extends Fragment {
-    RecyclerView recyclerViewMain;
     int[] icon, nameMenu, colorLayout;
     MainMenuAdapter menuAdapter;
+    RecyclerView recyclerViewMain;
+
 
 
     public MainMenuFragment() {
@@ -39,6 +44,8 @@ public class MainMenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_menu, container, false);
         initInstance(view);
+
+
         return view;
     }
 
@@ -51,5 +58,7 @@ public class MainMenuFragment extends Fragment {
         recyclerViewMain.setAdapter(menuAdapter);
 
 
+
     }
+
 }
