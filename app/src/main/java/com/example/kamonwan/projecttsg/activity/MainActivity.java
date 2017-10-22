@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     public void FragmentTabMenu() {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_home));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_friends));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_rank));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_badge));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         final TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());

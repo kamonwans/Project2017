@@ -9,4 +9,8 @@
     <color name="colorMenuSetting">#feb63e</color>
     <color name="colorMenuContact">#7ec44a</color>
     <color name="yourColor">#f966b2</color>
+    <color name="colorHomeTabName">#FE8ADAC1</color>
+    <color name="tvLevelColor">#3A9EB8</color>
+    <color name="colorPrimaryButton">#4BACC6</color>
+    <color name="colorTextButton">#FFFFFF</color>
 </resources>
