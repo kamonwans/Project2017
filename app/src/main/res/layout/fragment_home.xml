@@ -8,7 +8,7 @@
         android:id="@+id/homeMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tab 1"
+        android:text="Home"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
 </RelativeLayout>

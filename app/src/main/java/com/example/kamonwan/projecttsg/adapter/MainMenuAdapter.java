@@ -1,5 +1,6 @@
 package com.example.kamonwan.projecttsg.adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +10,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.kamonwan.projecttsg.R;
+import com.example.kamonwan.projecttsg.activity.MainContactActivity;
 
 
 public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHolder> {
     int[] icon;
     int[] nameMenu;
     int[] colorLayout;
+
 
     public MainMenuAdapter(int[] icon, int[] nameMenu,int[] colorLayout) {
         this.icon = icon;
@@ -28,6 +31,8 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_fragment_main_menu, parent, false);
         return new ViewHolder(view);
     }
+
+
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
@@ -51,6 +56,8 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
             imageIcon = (ImageView) itemView.findViewById(R.id.icon);
             textViewNameMenu = (TextView) itemView.findViewById(R.id.nameMenu);
             linearLayout = (LinearLayout) itemView.findViewById(R.id.linearLayoutMainMenu);
+
+
         }
     }
 
