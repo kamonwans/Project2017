@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "792671471549",
-    "firebase_url": "https://thaifrequentlymisspellinggame.firebaseio.com",
-    "project_id": "thaifrequentlymisspellinggame",
-    "storage_bucket": "thaifrequentlymisspellinggame.appspot.com"
+    "project_number": "668618998550",
+    "firebase_url": "https://projecttsg-f47fc.firebaseio.com",
+    "project_id": "projecttsg-f47fc",
+    "storage_bucket": "projecttsg-f47fc.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:792671471549:android:6d7e0eb7f9a139ef",
+        "mobilesdk_app_id": "1:668618998550:android:6d7e0eb7f9a139ef",
         "android_client_info": {
           "package_name": "com.example.kamonwan.projecttsg"
         }
       },
       "oauth_client": [
         {
-          "client_id": "792671471549-m17kdeb11op99anmt32082b0rjqev9jr.apps.googleusercontent.com",
+          "client_id": "668618998550-tubihp97592d93bd41iv1cu1l7uog16s.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCzIXYv1G1NpJcvWI80g7JQX_E9PmIPmMo"
+          "current_key": "AIzaSyBwHj_Tz2XnEznbmx5nIylrc6EvYrIJTEY"
         }
       ],
       "services": {
