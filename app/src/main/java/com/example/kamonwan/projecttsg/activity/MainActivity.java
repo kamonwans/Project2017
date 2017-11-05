@@ -16,24 +16,26 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.kamonwan.projecttsg.R;
 import com.example.kamonwan.projecttsg.adapter.TabAdapter;
+import com.example.kamonwan.projecttsg.fragment.HomeFragment;
 import com.example.kamonwan.projecttsg.fragment.MainMenuFragment;
-import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
+
 
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    DrawerLayout drawerLayout;
-    ActionBarDrawerToggle actionBarDrawerToggle;
-    Toolbar toolbar,toolbarMenu;
-    TabLayout tabLayout;
-    ViewPager viewPager;
-    TextView tvName,tvEmail;
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle actionBarDrawerToggle;
+    private Toolbar toolbar,toolbarMenu;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
 
 
@@ -43,11 +45,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initInstance();
 
+//        HomeFragment fragment = (HomeFragment)
+//                getSupportFragmentManager().findFragmentById(R.id.contentContainer);
+//        fragment.setTvProfile(name);
     }
 
     private void initInstance() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbarMenu = (Toolbar) findViewById(R.id.toolbarMenu);
+        toolbarMenu = (Toolbar) findViewById(R.id.toolbar);
         toolbarMenu.setTitle("Menu");
         setSupportActionBar(toolbar);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
@@ -56,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentTabMenu();
         FragmentMainMenu();
+        FragmentHome();
         actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this,
                 drawerLayout,
                 R.string.open_drawer, R.string.close_drawer);
@@ -64,33 +70,33 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Home");
 
-        tvName = (TextView) findViewById(R.id.TvName);
-        tvEmail = (TextView) findViewById(R.id.TvEmail);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            String name = user.getDisplayName();
-            String email = user.getEmail();
-
-            tvName.setText(name);
-            tvEmail.setText(email);
-        } else {
-            goLoginScreen();
-        }
-
-    }
-
-    private void goLoginScreen() {
-        Intent intent = new Intent(this, LoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
-
-    public void logout(View view) {
-        FirebaseAuth.getInstance().signOut();
-        LoginManager.getInstance().logOut();
-        goLoginScreen();
+//        tvName = (TextView) findViewById(R.id.TvName);
+//        tvEmail = (TextView) findViewById(R.id.TvEmail);
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        if (user != null) {
+//            String name = user.getDisplayName();
+//            String email = user.getEmail();
+//
+//            tvName.setText(name);
+//            tvEmail.setText(email);
+//        } else {
+//            goLoginScreen();
+//        }
 
     }
+
+//    private void goLoginScreen() {
+//        Intent intent = new Intent(this, LoginActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//        startActivity(intent);
+//    }
+//
+//    public void logout(View view) {
+//        //FirebaseAuth.getInstance().signOut();
+//        //LoginManager.getInstance().logOut();
+//        goLoginScreen();
+//
+//    }
     public void FragmentTabMenu() {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_home));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_friends));
@@ -142,6 +148,14 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
 
+    }
+
+    public void FragmentHome(){
+        HomeFragment homeFragment = new HomeFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.contentContainer, homeFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 
